@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mon Blog - Découvrez nos articles sur la technologie et le développement web">
+    <title>Accueil - Mon Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Lien d'évitement -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- En-tête du site -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="logo" role="img" aria-label="Logo Mon Blog">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h1>Mon blog</h1>
+                </div>
+                <a href="login.html" class="btn-login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main id="main-content" class="container main-content">
+        <h2 class="sr-only">Liste des articles</h2>
+        
+        <!-- Article 1 -->
+        <article class="article-card">
+            <div class="article-content">
+                <h3 class="article-title">
+                    <a href="article.html?id=1">Introduction à l'accessibilité web : pourquoi c'est important</a>
+                </h3>
+                <p class="article-excerpt">
+                    L'accessibilité web n'est pas qu'une obligation légale, c'est une question d'inclusion. Découvrez pourquoi rendre vos sites accessibles profite à tous les utilisateurs.
+                </p>
+                <div class="article-meta">
+                    <time datetime="2026-01-10">10 janvier 2026</time>
+                    <span aria-hidden="true">•</span>
+                    <a href="article.html?id=1#comments" class="comments-link">
+                        <span aria-label="6 commentaires">6 commentaires</span>
+                    </a>
+                </div>
+            </div>
+            <div class="article-image">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop" 
+                     alt="Personne utilisant un ordinateur avec des technologies d'assistance"
+                     loading="lazy">
+            </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="article-card">
+            <div class="article-content">
+                <h3 class="article-title">
+                    <a href="article.html?id=2">Les balises HTML sémantiques expliquées simplement</a>
+                </h3>
+                <p class="article-excerpt">
+                    Header, nav, main, article, section... Apprenez à structurer correctement vos pages HTML pour améliorer l'accessibilité et le référencement de vos sites web.
+                </p>
+                <div class="article-meta">
+                    <time datetime="2026-01-09">9 janvier 2026</time>
+                    <span aria-hidden="true">•</span>
+                    <a href="article.html?id=2#comments" class="comments-link">
+                        <span aria-label="12 commentaires">12 commentaires</span>
+                    </a>
+                </div>
+            </div>
+            <div class="article-image">
+                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=400&h=300&fit=crop" 
+                     alt="Code HTML affiché sur un écran d'ordinateur"
+                     loading="lazy">
+            </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="article-card">
+            <div class="article-content">
+                <h3 class="article-title">
+                    <a href="article.html?id=3">WCAG 2.1 : Les critères essentiels à connaître</a>
+                </h3>
+                <p class="article-excerpt">
+                    Les Web Content Accessibility Guidelines (WCAG) définissent les standards d'accessibilité web. Découvrez les critères de niveau A et AA que vous devez absolument respecter.
+                </p>
+                <div class="article-meta">
+                    <time datetime="2026-01-08">8 janvier 2026</time>
+                    <span aria-hidden="true">•</span>
+                    <a href="article.html?id=3#comments" class="comments-link">
+                        <span aria-label="8 commentaires">8 commentaires</span>
+                    </a>
+                </div>
+            </div>
+            <div class="article-image">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop" 
+                     alt="Documentation et notes de travail sur un bureau"
+                     loading="lazy">
+            </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="article-card">
+            <div class="article-content">
+                <h3 class="article-title">
+                    <a href="article.html?id=4">Testez l'accessibilité de votre site : outils et méthodes</a>
+                </h3>
+                <p class="article-excerpt">
+                    Comment savoir si votre site est vraiment accessible ? Découvrez les meilleurs outils automatiques et les techniques de test manuel pour valider votre travail.
+                </p>
+                <div class="article-meta">
+                    <time datetime="2026-01-07">7 janvier 2026</time>
+                    <span aria-hidden="true">•</span>
+                    <a href="article.html?id=4#comments" class="comments-link">
+                        <span aria-label="15 commentaires">15 commentaires</span>
+                    </a>
+                </div>
+            </div>
+            <div class="article-image">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop" 
+                     alt="Graphiques et analyses sur des écrans d'ordinateur"
+                     loading="lazy">
+            </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="article-card">
+            <div class="article-content">
+                <h3 class="article-title">
+                    <a href="article.html?id=5">Formulaires accessibles : les bonnes pratiques</a>
+                </h3>
+                <p class="article-excerpt">
+                    Les formulaires sont souvent un point de friction pour les utilisateurs en situation de handicap. Apprenez à créer des formulaires vraiment accessibles avec des labels clairs, des messages d'erreur explicites et une navigation au clavier fluide.
+                </p>
+                <div class="article-meta">
+                    <time datetime="2026-01-06">6 janvier 2026</time>
+                    <span aria-hidden="true">•</span>
+                    <a href="article.html?id=5#comments" class="comments-link">
+                        <span aria-label="9 commentaires">9 commentaires</span>
+                    </a>
+                </div>
+            </div>
+            <div class="article-image">
+                <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&h=300&fit=crop" 
+                     alt="Personne remplissant un formulaire sur une tablette"
+                     loading="lazy">
+            </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="article-card">
+            <div class="article-content">
+                <h3 class="article-title">
+                    <a href="article.html?id=6">Navigation au clavier : pourquoi et comment l'optimiser</a>
+                </h3>
+                <p class="article-excerpt">
+                    De nombreux utilisateurs naviguent uniquement au clavier. Assurez-vous que votre site offre une expérience fluide avec un ordre de tabulation logique et des indicateurs de focus visibles.
+                </p>
+                <div class="article-meta">
+                    <time datetime="2026-01-05">5 janvier 2026</time>
+                    <span aria-hidden="true">•</span>
+                    <a href="article.html?id=6#comments" class="comments-link">
+                        <span aria-label="4 commentaires">4 commentaires</span>
+                    </a>
+                </div>
+            </div>
+            <div class="article-image">
+                <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400&h=300&fit=crop" 
+                     alt="Gros plan sur un clavier d'ordinateur"
+                     loading="lazy">
+            </div>
+        </article>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 Mon Blog - Tous droits réservés</p>
+            <p>Un site créé avec passion pour l'accessibilité web</p>
+        </div>
+    </footer>
+</body>
+</html>
