@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Article - Mon Blog">
+    <title>Introduction à l'accessibilité web - Mon Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Lien d'évitement -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- En-tête du site -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="logo" role="img" aria-label="Logo Mon Blog">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h1>Mon blog</h1>
+                </div>
+                <a href="login.html" class="btn-login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main id="main-content" class="container">
+        <!-- Fil d'Ariane (breadcrumb) -->
+        <nav aria-label="Fil d'Ariane" class="breadcrumb">
+            <ol>
+                <li><a href="index.html">Accueil</a></li>
+                <li aria-current="page">Introduction à l'accessibilité web</li>
+            </ol>
+        </nav>
+
+        <!-- Article -->
+        <article class="article-detail">
+            <header class="article-header">
+                <h2>Introduction à l'accessibilité web : pourquoi c'est important</h2>
+                <div class="article-meta">
+                    <time datetime="2026-01-10">10 janvier 2026</time>
+                    <span aria-hidden="true">•</span>
+                    <span>Par <span class="author">Marie Dupont</span></span>
+                    <span aria-hidden="true">•</span>
+                    <span>5 min de lecture</span>
+                </div>
+            </header>
+
+            <figure class="article-featured-image">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=600&fit=crop" 
+                     alt="Personne utilisant un ordinateur avec des technologies d'assistance">
+                <figcaption>L'accessibilité web permet à tous d'accéder au contenu en ligne</figcaption>
+            </figure>
+
+            <div class="article-body">
+                <section>
+                    <h3>Qu'est-ce que l'accessibilité web ?</h3>
+                    <p>
+                        L'accessibilité web signifie que les sites internet, les outils et les technologies sont conçus et développés de façon à ce que les personnes en situation de handicap puissent les utiliser. Plus précisément, les utilisateurs peuvent percevoir, comprendre, naviguer et interagir avec le Web.
+                    </p>
+                    <p>
+                        L'accessibilité web englobe tous les handicaps qui affectent l'accès au Web, notamment les handicaps auditifs, cognitifs, neurologiques, physiques, visuels et liés à la parole.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Pourquoi l'accessibilité est-elle importante ?</h3>
+                    <p>
+                        L'accessibilité web profite aux personnes avec ou sans handicap. Par exemple, une fonctionnalité essentielle de l'accessibilité web est que les sites fonctionnent bien pour les personnes âgées dont les capacités changent avec l'âge.
+                    </p>
+                    <p>
+                        De plus, l'accessibilité web aide également les personnes sans handicap, telles que :
+                    </p>
+                    <ul>
+                        <li>Les personnes utilisant des téléphones mobiles ou des montres connectées</li>
+                        <li>Les personnes âgées dont les capacités changent avec l'âge</li>
+                        <li>Les personnes ayant un handicap temporaire comme un bras cassé</li>
+                        <li>Les personnes en situation limitante comme sous un soleil éclatant</li>
+                        <li>Les personnes ayant une connexion Internet lente</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Les bénéfices business de l'accessibilité</h3>
+                    <p>
+                        Au-delà de l'aspect éthique et légal, l'accessibilité web présente de nombreux avantages pour votre entreprise. Un site accessible améliore l'expérience utilisateur pour tous, ce qui peut augmenter votre audience et améliorer votre image de marque.
+                    </p>
+                    <p>
+                        De plus, les pratiques d'accessibilité améliorent souvent le référencement naturel (SEO) de votre site, car les moteurs de recherche privilégient les sites bien structurés et sémantiques.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Par où commencer ?</h3>
+                    <p>
+                        Si vous débutez dans l'accessibilité web, commencez par les bases : utilisez des balises HTML sémantiques, ajoutez des textes alternatifs à vos images, assurez-vous que votre site est navigable au clavier, et vérifiez les contrastes de couleurs.
+                    </p>
+                    <p>
+                        Les Web Content Accessibility Guidelines (WCAG) sont la référence internationale en matière d'accessibilité web. Commencez par viser le niveau AA, qui représente un bon équilibre entre accessibilité et faisabilité.
+                    </p>
+                </section>
+            </div>
+        </article>
+
+        <!-- Section commentaires -->
+        <section id="comments" class="comments-section">
+            <h3>Commentaires (6)</h3>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong class="comment-author">Jean Martin</strong>
+                    <time datetime="2026-01-11">11 janvier 2026 à 14:30</time>
+                </div>
+                <p class="comment-body">
+                    Excellent article ! C'est vrai que l'accessibilité bénéficie à tout le monde. J'ai moi-même une meilleure expérience sur les sites accessibles même sans handicap.
+                </p>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong class="comment-author">Sophie Leclerc</strong>
+                    <time datetime="2026-01-11">11 janvier 2026 à 15:45</time>
+                </div>
+                <p class="comment-body">
+                    Merci pour cet article très clair. En tant que développeuse, je me rends compte que j'ai encore beaucoup à apprendre sur le sujet. Avez-vous des ressources à recommander ?
+                </p>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong class="comment-author">Pierre Dubois</strong>
+                    <time datetime="2026-01-11">11 janvier 2026 à 16:20</time>
+                </div>
+                <p class="comment-body">
+                    Article très instructif. Il est temps que l'accessibilité devienne une priorité dans tous les projets web !
+                </p>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong class="comment-author">Amélie Bernard</strong>
+                    <time datetime="2026-01-11">11 janvier 2026 à 17:10</time>
+                </div>
+                <p class="comment-body">
+                    Je suis malvoyante et je confirme que les sites accessibles changent complètement ma vie en ligne. Merci de sensibiliser sur ce sujet !
+                </p>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong class="comment-author">Thomas Rousseau</strong>
+                    <time datetime="2026-01-12">12 janvier 2026 à 09:15</time>
+                </div>
+                <p class="comment-body">
+                    Très bon article ! J'ajouterais que l'accessibilité améliore aussi la maintenabilité du code. Un code sémantique est plus facile à comprendre et à maintenir.
+                </p>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong class="comment-author">Claire Moreau</strong>
+                    <time datetime="2026-01-12">12 janvier 2026 à 10:30</time>
+                </div>
+                <p class="comment-body">
+                    Merci pour ces explications. Je vais tout de suite commencer à appliquer ces principes sur mes projets !
+                </p>
+            </div>
+        </section>
+
+        <!-- Retour à l'accueil -->
+        <div class="back-link">
+            <a href="index.html">← Retour aux articles</a>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 Mon Blog - Tous droits réservés</p>
+            <p>Un site créé avec passion pour l'accessibilité web</p>
+        </div>
+    </footer>
+</body>
+</html>
