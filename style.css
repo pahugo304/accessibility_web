@@ -635,3 +635,52 @@ body {
         align-items: flex-start;
     }
 }
+
+/* Wrapper pour le champ mot de passe avec bouton */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    padding-right: 45px; /* Espace pour le bouton œil */
+    position: relative;
+    z-index: 1;
+}
+
+/* Bouton toggle mot de passe (œil) */
+.password-toggle {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    border-radius: 4px;
+    transition: all 0.2s;
+    z-index: 10; /* IMPORTANT : pour rester au-dessus du champ */
+}
+
+.password-toggle:hover {
+    color: #374151;
+    background-color: #f3f4f6;
+}
+
+.password-toggle:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+    color: #2563eb;
+}
+
+/* Icône œil */
+.eye-icon {
+    width: 20px;
+    height: 20px;
+    pointer-events: none; /* IMPORTANT : empêche l'icône de bloquer les clics */
+}
