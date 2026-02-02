@@ -187,7 +187,8 @@ body {
 }
 
 .form-group input[type="email"],
-.form-group input[type="password"] {
+.form-group input[type="password"],
+.form-group input[type="text"] {
     width: 100%;
     padding: 10px 12px;
     border: 1px solid #d1d5db;
@@ -199,6 +200,51 @@ body {
 .form-group input:focus {
     border-color: #2563eb;
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Wrapper pour le champ mot de passe avec bouton */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    padding-right: 45px; /* Espace pour le bouton œil */
+}
+
+/* Bouton toggle mot de passe (œil) */
+.password-toggle {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.password-toggle:hover {
+    color: #374151;
+    background-color: #f3f4f6;
+}
+
+.password-toggle:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+    color: #2563eb;
+}
+
+/* Icône œil */
+.eye-icon {
+    width: 20px;
+    height: 20px;
 }
 
 .form-options {

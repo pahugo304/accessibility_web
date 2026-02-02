@@ -20,6 +20,45 @@
         .skip-link:focus {
             top: 0;
         }
+        
+        /* Wrapper pour le champ mot de passe avec bouton */
+        .password-wrapper {
+            position: relative;
+        }
+        
+        /* Bouton toggle mot de passe (œil) */
+        .password-toggle {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        
+        .password-toggle:hover {
+            color: #374151;
+            background-color: #f3f4f6;
+        }
+        
+        .password-toggle:focus {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+            color: #3b82f6;
+        }
+        
+        /* Espace pour le bouton dans l'input */
+        .password-wrapper input {
+            padding-right: 45px;
+        }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
@@ -64,22 +103,40 @@
                             <p id="email-description" class="sr-only">Entrez votre adresse email pour vous connecter</p>
                         </div>
 
-                        <!-- Password field -->
+                        <!-- Password field avec bouton œil -->
                         <div>
                             <label for="password" class="block text-sm font-medium text-gray-700 mb-1">
                                 Mot de passe
                             </label>
-                            <input 
-                                id="password" 
-                                name="password" 
-                                type="password" 
-                                autocomplete="current-password" 
-                                required 
-                                class="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
-                                placeholder="Mot de passe"
-                                aria-required="true"
-                                aria-describedby="password-description"
-                            >
+                            <div class="password-wrapper">
+                                <input 
+                                    id="password" 
+                                    name="password" 
+                                    type="password" 
+                                    autocomplete="current-password" 
+                                    required 
+                                    class="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                                    placeholder="Mot de passe"
+                                    aria-required="true"
+                                    aria-describedby="password-description"
+                                >
+                                <button 
+                                    type="button" 
+                                    class="password-toggle" 
+                                    aria-label="Afficher le mot de passe"
+                                    aria-pressed="false"
+                                    onclick="togglePassword()"
+                                >
+                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <!-- Œil ouvert (visible par défaut) -->
+                                        <path class="eye-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path class="eye-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                        <!-- Œil barré (caché par défaut) -->
+                                        <line class="eye-closed" x1="3" y1="3" x2="21" y2="21" stroke-linecap="round" stroke-width="2" style="display: none;" />
+                                        <path class="eye-closed" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.5 10.677a2 2 0 002.823 2.823M7.362 7.561A8.963 8.963 0 0112 6.25c4.478 0 8.268 2.194 9.542 5.25a9.99 9.99 0 01-2.134 3.139M3.458 12.75c1.274-3.056 5.065-5.25 9.542-5.25.838 0 1.653.101 2.435.287" style="display: none;" />
+                                    </svg>
+                                </button>
+                            </div>
                             <p id="password-description" class="sr-only">Entrez votre mot de passe</p>
                         </div>
                     </div>
@@ -123,4 +180,42 @@
                         <p class="text-sm text-gray-600">
                             Pas encore de compte ?
                             <a href="#" class="font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded">
-                                
+                                Créer un compte
+                            </a>
+                        </p>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleButton = document.querySelector('.password-toggle');
+            const eyeOpen = document.querySelectorAll('.eye-open');
+            const eyeClosed = document.querySelectorAll('.eye-closed');
+            
+            if (passwordInput.type === 'password') {
+                // Afficher le mot de passe
+                passwordInput.type = 'text';
+                toggleButton.setAttribute('aria-label', 'Masquer le mot de passe');
+                toggleButton.setAttribute('aria-pressed', 'true');
+                
+                // Changer l'icône : cacher l'œil ouvert, montrer l'œil barré
+                eyeOpen.forEach(path => path.style.display = 'none');
+                eyeClosed.forEach(path => path.style.display = 'block');
+            } else {
+                // Masquer le mot de passe
+                passwordInput.type = 'password';
+                toggleButton.setAttribute('aria-label', 'Afficher le mot de passe');
+                toggleButton.setAttribute('aria-pressed', 'false');
+                
+                // Changer l'icône : montrer l'œil ouvert, cacher l'œil barré
+                eyeOpen.forEach(path => path.style.display = 'block');
+                eyeClosed.forEach(path => path.style.display = 'none');
+            }
+        }
+    </script>
+</body>
+</html>
