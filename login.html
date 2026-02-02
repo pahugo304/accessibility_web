@@ -3,198 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connexion - Mon Blog">
     <title>Connexion - Mon Blog</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Skip to main content link */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #000;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            z-index: 100;
-        }
-        .skip-link:focus {
-            top: 0;
-        }
-        
-        /* Wrapper pour le champ mot de passe avec bouton */
-        .password-wrapper {
-            position: relative;
-        }
-        
-        /* Bouton toggle mot de passe (œil) */
-        .password-toggle {
-            position: absolute;
-            right: 8px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #6b7280;
-            border-radius: 4px;
-            transition: all 0.2s;
-        }
-        
-        .password-toggle:hover {
-            color: #374151;
-            background-color: #f3f4f6;
-        }
-        
-        .password-toggle:focus {
-            outline: 2px solid #3b82f6;
-            outline-offset: 2px;
-            color: #3b82f6;
-        }
-        
-        /* Espace pour le bouton dans l'input */
-        .password-wrapper input {
-            padding-right: 45px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 min-h-screen">
-    <!-- Skip to main content for keyboard navigation -->
+<body>
+    <!-- Lien d'évitement -->
     <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
-    <div class="min-h-screen flex items-center justify-center px-4 py-12">
-        <div class="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-md">
-            <!-- Logo/Header -->
-            <div class="text-center">
-                <div class="mx-auto h-24 w-24 bg-gray-200 rounded-lg flex items-center justify-center" role="img" aria-label="Logo Mon Blog">
-                    <svg class="h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                    </svg>
+    <!-- En-tête du site -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="logo" role="img" aria-label="Logo Mon Blog">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h1>Mon blog</h1>
                 </div>
-                <h1 class="mt-6 text-3xl font-bold text-gray-900">Mon Blog</h1>
-                <p class="mt-2 text-sm text-gray-600">Connectez-vous à votre compte</p>
+                <a href="index.html" class="btn-login">Retour à l'accueil</a>
             </div>
+        </div>
+    </header>
 
-            <!-- Login Form -->
-            <main id="main-content">
-                <form class="mt-8 space-y-6" action="index.html" method="get" aria-labelledby="form-title">
-                    <h2 id="form-title" class="sr-only">Formulaire de connexion</h2>
+    <!-- Contenu principal -->
+    <main id="main-content">
+        <div class="login-container">
+            <div class="login-card">
+                <!-- En-tête de connexion -->
+                <div class="login-header">
+                    <div class="logo" role="img" aria-label="Logo Mon Blog">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h2>Mon Blog</h2>
+                    <p>Connectez-vous à votre compte</p>
+                </div>
+
+                <!-- Formulaire de connexion -->
+                <form class="login-form" action="index.html" method="get" aria-labelledby="form-title">
+                    <h3 id="form-title" class="sr-only">Formulaire de connexion</h3>
                     
-                    <div class="space-y-4">
-                        <!-- Email field -->
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
-                                Adresse email
-                            </label>
-                            <input 
-                                id="email" 
-                                name="email" 
-                                type="email" 
-                                autocomplete="email" 
-                                required 
-                                class="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
-                                placeholder="votre@email.com"
-                                aria-required="true"
-                                aria-describedby="email-description"
-                            >
-                            <p id="email-description" class="sr-only">Entrez votre adresse email pour vous connecter</p>
-                        </div>
-
-                        <!-- Password field avec bouton œil -->
-                        <div>
-                            <label for="password" class="block text-sm font-medium text-gray-700 mb-1">
-                                Mot de passe
-                            </label>
-                            <div class="password-wrapper">
-                                <input 
-                                    id="password" 
-                                    name="password" 
-                                    type="password" 
-                                    autocomplete="current-password" 
-                                    required 
-                                    class="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
-                                    placeholder="Mot de passe"
-                                    aria-required="true"
-                                    aria-describedby="password-description"
-                                >
-                                <button 
-                                    type="button" 
-                                    class="password-toggle" 
-                                    aria-label="Afficher le mot de passe"
-                                    aria-pressed="false"
-                                    onclick="togglePassword()"
-                                >
-                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <!-- Œil ouvert (visible par défaut) -->
-                                        <path class="eye-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        <path class="eye-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                        <!-- Œil barré (caché par défaut) -->
-                                        <line class="eye-closed" x1="3" y1="3" x2="21" y2="21" stroke-linecap="round" stroke-width="2" style="display: none;" />
-                                        <path class="eye-closed" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.5 10.677a2 2 0 002.823 2.823M7.362 7.561A8.963 8.963 0 0112 6.25c4.478 0 8.268 2.194 9.542 5.25a9.99 9.99 0 01-2.134 3.139M3.458 12.75c1.274-3.056 5.065-5.25 9.542-5.25.838 0 1.653.101 2.435.287" style="display: none;" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <p id="password-description" class="sr-only">Entrez votre mot de passe</p>
-                        </div>
+                    <!-- Champ email -->
+                    <div class="form-group">
+                        <label for="email">Adresse email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="votre@email.com"
+                            autocomplete="email"
+                            required
+                            aria-required="true"
+                            aria-describedby="email-description"
+                        >
+                        <p id="email-description" class="sr-only">Entrez votre adresse email pour vous connecter</p>
                     </div>
 
-                    <!-- Remember me & Forgot password -->
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center">
+                    <!-- Champ mot de passe avec bouton œil -->
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <div class="password-wrapper">
                             <input 
-                                id="remember-me" 
-                                name="remember-me" 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="Mot de passe"
+                                autocomplete="current-password"
+                                required
+                                aria-required="true"
+                                aria-describedby="password-description"
+                            >
+                            <button 
+                                type="button" 
+                                class="password-toggle" 
+                                id="toggle-password"
+                                aria-label="Afficher le mot de passe"
+                                aria-pressed="false"
+                                aria-controls="password"
+                            >
+                                <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                                    <!-- Œil ouvert (visible par défaut) -->
+                                    <g class="eye-open">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </g>
+                                    <!-- Œil barré (caché par défaut) -->
+                                    <g class="eye-closed" style="display: none;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <p id="password-description" class="sr-only">Entrez votre mot de passe. Utilisez le bouton pour afficher ou masquer le mot de passe.</p>
+                    </div>
+
+                    <!-- Options du formulaire -->
+                    <div class="form-options">
+                        <div class="checkbox-group">
+                            <input 
                                 type="checkbox" 
-                                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                                id="remember-me" 
+                                name="remember-me"
                                 aria-describedby="remember-description"
                             >
-                            <label for="remember-me" class="ml-2 block text-sm text-gray-900">
-                                Se souvenir de moi
-                            </label>
-                            <p id="remember-description" class="sr-only">Cochez cette case pour rester connecté</p>
+                            <label for="remember-me">Se souvenir de moi</label>
+                            <p id="remember-description" class="sr-only">Cochez cette case pour rester connecté sur cet appareil</p>
                         </div>
-
-                        <div class="text-sm">
-                            <a href="#" class="font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded">
-                                Mot de passe oublié ?
-                            </a>
-                        </div>
+                        <a href="#" class="link">Mot de passe oublié ?</a>
                     </div>
 
-                    <!-- Submit button -->
-                    <div>
-                        <button 
-                            type="submit" 
-                            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
-                            aria-label="Se connecter au blog"
-                        >
-                            Se connecter
-                        </button>
-                    </div>
+                    <!-- Bouton de connexion -->
+                    <button type="submit" class="btn-primary">Se connecter</button>
 
-                    <!-- Register link -->
-                    <div class="text-center">
-                        <p class="text-sm text-gray-600">
-                            Pas encore de compte ?
-                            <a href="#" class="font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded">
-                                Créer un compte
-                            </a>
-                        </p>
-                    </div>
+                    <!-- Lien d'inscription -->
+                    <p class="signup-text">
+                        Pas encore de compte ? 
+                        <a href="#" class="link">Créer un compte</a>
+                    </p>
                 </form>
-            </main>
+            </div>
         </div>
-    </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 Mon Blog - Tous droits réservés</p>
+            <p>Un site créé avec passion pour l'accessibilité web</p>
+        </div>
+    </footer>
 
     <script>
-        function togglePassword() {
+        // Fonction pour basculer la visibilité du mot de passe
+        function togglePasswordVisibility() {
             const passwordInput = document.getElementById('password');
-            const toggleButton = document.querySelector('.password-toggle');
-            const eyeOpen = document.querySelectorAll('.eye-open');
-            const eyeClosed = document.querySelectorAll('.eye-closed');
+            const toggleButton = document.getElementById('toggle-password');
+            const eyeOpen = document.querySelector('.eye-open');
+            const eyeClosed = document.querySelector('.eye-closed');
             
             if (passwordInput.type === 'password') {
                 // Afficher le mot de passe
@@ -202,20 +151,52 @@
                 toggleButton.setAttribute('aria-label', 'Masquer le mot de passe');
                 toggleButton.setAttribute('aria-pressed', 'true');
                 
-                // Changer l'icône : cacher l'œil ouvert, montrer l'œil barré
-                eyeOpen.forEach(path => path.style.display = 'none');
-                eyeClosed.forEach(path => path.style.display = 'block');
+                // Changer l'icône
+                eyeOpen.style.display = 'none';
+                eyeClosed.style.display = 'block';
+                
+                // Annoncer le changement pour les lecteurs d'écran
+                announceToScreenReader('Mot de passe visible');
             } else {
                 // Masquer le mot de passe
                 passwordInput.type = 'password';
                 toggleButton.setAttribute('aria-label', 'Afficher le mot de passe');
                 toggleButton.setAttribute('aria-pressed', 'false');
                 
-                // Changer l'icône : montrer l'œil ouvert, cacher l'œil barré
-                eyeOpen.forEach(path => path.style.display = 'block');
-                eyeClosed.forEach(path => path.style.display = 'none');
+                // Changer l'icône
+                eyeOpen.style.display = 'block';
+                eyeClosed.style.display = 'none';
+                
+                // Annoncer le changement pour les lecteurs d'écran
+                announceToScreenReader('Mot de passe masqué');
             }
         }
+
+        // Fonction pour annoncer un message aux lecteurs d'écran
+        function announceToScreenReader(message) {
+            // Créer une région live pour les annonces
+            let liveRegion = document.getElementById('live-region');
+            if (!liveRegion) {
+                liveRegion = document.createElement('div');
+                liveRegion.id = 'live-region';
+                liveRegion.setAttribute('role', 'status');
+                liveRegion.setAttribute('aria-live', 'polite');
+                liveRegion.setAttribute('aria-atomic', 'true');
+                liveRegion.className = 'sr-only';
+                document.body.appendChild(liveRegion);
+            }
+            
+            // Mettre à jour le message
+            liveRegion.textContent = message;
+            
+            // Nettoyer après 1 seconde
+            setTimeout(() => {
+                liveRegion.textContent = '';
+            }, 1000);
+        }
+
+        // Ajouter l'événement au bouton
+        document.getElementById('toggle-password').addEventListener('click', togglePasswordVisibility);
     </script>
 </body>
 </html>
